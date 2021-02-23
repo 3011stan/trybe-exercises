@@ -6,39 +6,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    li {
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      background-color: rgb(189, 184, 189);
+   
+    }
+    h1{
+      text-align: center;
+    }
+    h1{
+      color: white;
+    }
+    .menu-nav ul {
+      text-align: center;
+    }
+    .menu-nav li {
       list-style: none;
       display: inline-block;
       text-align: center;
-      font-weight: 900;
+      font-weight: 400;
       font-size: 25px;
       margin-right: 35px;
       
     }
-    li a {
+    .menu-nav li a {
       color: white;
       text-decoration: none;
 
     }
-    .menu-nav {
+    header {
       background-color: rgb(75, 71, 71);
+      padding-bottom: 25px;
     }
-    th, td{
-      padding-right: 10px;
-    }
+   
     img {
-      border: solid 1px rgb(255, 0, 0);
+      border: solid 1px black;
     }
     .fatos-importantes {
       margin-left: auto;
       margin-right: auto;
-      width: 40em;
+      width: 45em;
+    }
+    h2, h3{
+      color: rgb(33, 85, 87);
+    }
+    article{
+      font-size: 20px;
+    }
+    .ficha-cientifica {
+      float: right;
+    }
+    .ficha-cientifica ul li{
+      list-style: none;
+    }
+
+    .artigo-1{
+      display: inline-block;
+      width: 70%;
+    }
+    aside {
+      width: 25%;
+    }
+    footer {
+      background-color: rgb(75, 71, 71);
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+    footer p{
+      font-size: 20px;
+      color: white;
+    }
+    footer a {
+      color: white;
     }
   </style>
 </head>
 <body>
-  <h1>Soco a 80km/h: Conheça o Stomatopoda.</h1>
   <header>
+    <h1>Soco a 80km/h: <br>Conheça o Stomatopoda.</h1>
+    <br>
     <nav class="menu-nav">
       <ul>
         <li><a href="#">Página Inicial</a></li>
@@ -49,48 +99,38 @@
   </header>
   <article class="fatos-importantes">
     <section class="info-geral">
-      <h2>Fatos sobre o Stomatopoda</h2>
-      <article>
-        Stomatopoda (ou estomatópode), chamados popularmente de tamarutacas ou de lacraias-do-mar no Brasil, é uma ordem de crustáceos marinhos da subclasse Hoplocarida, que agrupa cerca de 400 espécies, caracterizadas principalmente pela morfologia da segunda pata torácica, que é modificada em apêndice subquelado, lembrando uma pata de louva-a-deus[2]. Seu nome científico é <em>Odontadoctylus scyllarus.</em>Os estomatópodes são predadores ativos que caçam presas com o auxílio de um sentido de visão muito apurado e capaz de interpretar polarização no espectro ultravioleta e infravermelho). Apresentam uma grande variação de tamanho, que pode ir de poucos milímetros até aproximadamente 40 cm nas espécies maiores. Eles vivem em fundo consolidado, lodoso ou ainda arenoso, onde cavam seus buracos ou aproveitam-se dos orifícios deixados por outros animais para neles se instalar. São animais exclusivamente carnívoros, alimentando-se de camarões, caranguejos, moluscos, peixes e até mesmo outros da mesma ordem. O segundo par de patas, muito desenvolvido, é usado tanto para atacar a presa como para se defender. O urópodo, quando aberto, também funciona para defesa, como um escudo, fechando a galeria em que o animal esteja instalado. A fêmea desova no local onde se abriga e, em caso de perigo, enrola os ovos como uma bola, prendendo-os junto ao corpo até encontrar um abrigo mais protegido.
-
-        Também conhecidas como esquilas ou lagosta-boxeadora, espalhadas pelas costas dos mares tropicais e subtropicais. Além das patas, elas apresentam uma silhueta característica, devido ao grande comprimento aparentemente de seu abdómen. Os ovos ficam ligados por uma massa gelatinosa que a mãe carrega contra o ventre até que eclodem, limpando-os sem parar.
-        
-        São animais que apresentam comportamentos sociais muito variados, desde ameaças visuais contra predadores até comportamentos de côrte. De acordo com a anatomia da sua pata raptorial é possível distinguir entre dois grupos funcionais, as perfuradoras (spearers) ou as esmagadoras (smashers), sendo que cada um dos tipos apresenta sua própria variação comportamental e até mesmo de habitat.
+      <h2>O Stomatopoda</h2>
+      <article class="artigo-1">
+        Stomatopoda (ou estomatópode), chamados popularmente de tamarutacas ou de lacraias-do-mar no Brasil, é uma ordem de crustáceos marinhos da subclasse Hoplocarida, que agrupa cerca de 400 espécies, caracterizadas principalmente pela morfologia da segunda pata torácica, que é modificada em apêndice subquelado, lembrando uma pata de louva-a-deus[2]. Seu nome científico é <em>Odontadoctylus scyllarus.</em>Veja o <a href="https://www.youtube.com/watch?v=E0Li1k5hGBE&ab_channel=NatGeoWILD" target="_blank">animal em ação.</a>
       </article>
-      <aside>Veja o <a href="https://www.youtube.com/watch?v=E0Li1k5hGBE&ab_channel=NatGeoWILD" target="_blank">animal em ação.</a></aside>
+      <aside class="ficha-cientifica">
+        <ul>
+          <li><b>Reino:</b> Animalia</li>
+          <li><b>Filo:</b> Arthropoda</li>
+          <li><b>Subfilo:</b> Crustacea</li>
+          <li><b>Classe:</b> Malacostraca</li>
+          <li><b>Subclasse:</b> Hoplocarida</li>
+          <li><b>Ordem:</b> Stomatopoda</li>
+        </ul>
+      </aside>
       <br>
-      <table>
-        <tr>
-          <th>Reino</th>
-          <th>Filo</th>
-          <th>Subfilo</th>
-          <th>Classe</th>
-          <th>Subclasse</th>
-          <th>Ordem</th>
-        </tr>
-        <tr>
-          <td>Animalia</td>
-          <td>Arthropoda</td>
-          <td>Crustacea</td>
-          <td>Malacostraca</td>
-          <td>Hoplocarida</td>
-          <td>Stomatopoda</td>
-        </tr>
-      </table>
+      
     </section>
     <br>
     <section class="fato-1">
       <h3>A visão deste camarão</h3>
       <p>Os crustáceos estomatópodes (camarões mantis) possuem um sistema visual incrivelmente complexo, composto por olhos compostos que contêm mais tipos de fotorreceptores do que em qualquer outro animal conhecido. O arsenal óptico do olho do camarão mantis inclui capacidade de localização monocular, visão de <strong>cores de 12 canais</strong>, detecção de polarização linear de 2 canais e, em algumas espécies, a capacidade de detectar e analisar luz polarizada circularmente. Subjacente a esse conjunto incomparável de capacidades funcionais está uma diversificação estrutural de uma unidade fotorreceptiva básica comum a todos os olhos compostos, o omatídio. A seguir, as proezas visuais do camarão mantis são descritas no contexto das variações do design e da distribuição de seus omatídios.</p>
       <img src="./img/olho-camarao.jpg" alt="foto olho do camarao">
-   
+      <br>
+      <br>
       <h3>Animal com soco mais forte</h3>
       <p>Dentre as 400 espécies de estomatópodes (crustáceos marinhos), o ‘Odontodactylus scyllarus’ é o que desfere o golpe mais poderoso: seu soco chega a <strong>80 quilômetros por hora</strong>, uma aceleração semelhante a um disparo de uma arma calibre 22. Com uma pressão resultante de 60 quilos por centímetro quadrado, essa lagosta consegue facilmente quebrar a carapaça de um caranguejo ou até mesmo o vidro de um aquário. Por isso é interessante não mantê-la em um.
       </p>
       <img src="./img/soco-camarao.png" alt="foto soco do camarao">
+      <br><br>
     </section>
     <section class="referencias-biblio">
-      <h4>Fontes bibliográficas</h4>
+      <h3>Referências</h3> <br>
       <a href="https://ambientalistasemrede.wordpress.com/2012/10/07/camarao-mantis-super-visao-que-enxerga-cores-que-nem-conhecemos/">ambientalistasemrede.wordpress.com</a> <br>
       <a href="https://theoatmeal.com/comics/mantis_shrimp">theoatmeal</a><br>
       <a href="http://imprensaberta.com.br/camarao-mantis-o-mais-forte-do-reino-animal/#:~:text=Uma%20das%20criaturas%20mais%20fascinantes,mais%20potente%20do%20mundo%20animal.">imprensa aberta</a>
@@ -100,7 +140,7 @@
     <br>
   </article>
   <footer>
-    <p>"Conteúdo compilado por Stanrley B, 2021.</p>
+    <p>Conteúdo compilado por <a href="https://github.com/3011stan">@Stans</a>, 2021.</p>
   </footer>
 </body>
 </html>
