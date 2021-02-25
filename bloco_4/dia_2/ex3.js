@@ -1,4 +1,7 @@
-//Adicione o valor "Contato" no final do array menu
-let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-menu.push('Contato');
-console.log(menu);
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let soma = 0;
+for(let i = 0; i < numbers.length; i++){
+  soma = soma + numbers[i];
+}
+let media = soma/numbers.length;
+console.log(media);
