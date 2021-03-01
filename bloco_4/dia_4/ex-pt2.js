@@ -71,3 +71,13 @@ function countMaior(arrayEntrada){
 }
 var arrayEntrada = [1, 2, 3, 4, 5, 2, 2, 3];
 console.log(countMaior(arrayEntrada));
+
+//Exercicio 6 : Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
+function sumNumbers(number){
+  let retornoNumber = 0;
+  for(let i = 1; i <= number; i += 1){
+    retornoNumber = retornoNumber + i;
+  }
+  return retornoNumber;
+}
+console.log(sumNumbers(5));
