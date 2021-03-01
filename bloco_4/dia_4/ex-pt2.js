@@ -37,3 +37,16 @@ function retornaIndiceMenorValor(arrayNumbers){
 }
 arrayNumbers = [2, 3, 6, 7, 10, 1];
 console.log(retornaIndiceMenorValor(arrayNumbers));
+
+//Exercicio 4: Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+function retornaMaiorNome(arrayNames){
+  let name = arrayNames[0]; //colocando primeiro nome do array numa variavel.
+  for(let i = 1; i < arrayNames.length; i += 1){
+    if(name.length < arrayNames[i].length){
+      name = arrayNames[i];
+    }
+  }
+  return name;
+}
+let arrayNames = ['Jose', 'Lucas', 'Nadia', 'Fernanda', 'Cairo', 'Joana'];
+console.log(retornaMaiorNome(arrayNames));
