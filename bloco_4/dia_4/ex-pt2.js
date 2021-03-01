@@ -23,3 +23,17 @@ function retornaIndiceMaiorValor(arrayNumbers){
 }
 arrayNumbers = [2, 3, 6, 7, 10, 1];
 console.log(retornaIndiceMaiorValor(arrayNumbers));
+
+//Exercicio 3: Crie uma função que receba um array de inteiros e retorne o ĩndice do menor valor.
+function retornaIndiceMenorValor(arrayNumbers){
+  let menor = arrayNumbers[0];
+  for(let i = 1; i < arrayNumbers.length; i += 1){
+    if(menor > arrayNumbers[i]){
+      menor = arrayNumbers[i];
+    }
+  }
+  let index = arrayNumbers.indexOf(menor);
+  return index;
+}
+arrayNumbers = [2, 3, 6, 7, 10, 1];
+console.log(retornaIndiceMenorValor(arrayNumbers));
