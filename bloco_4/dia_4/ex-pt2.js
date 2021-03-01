@@ -50,3 +50,24 @@ function retornaMaiorNome(arrayNames){
 }
 let arrayNames = ['Jose', 'Lucas', 'Nadia', 'Fernanda', 'Cairo', 'Joana'];
 console.log(retornaMaiorNome(arrayNames));
+
+//Exercicio 5: Cria uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+function countMaior(arrayEntrada){
+  arrayEntrada.sort();
+
+  var maior = 0;
+  var maiorOcorrencia = -1;
+
+  var count = 1;
+  for ( var i = 1 ; i <= arrayEntrada.length ; i++ ) {
+    if ( i < arrayEntrada.length && arrayEntrada[i] == arrayEntrada[i-count] ){
+      count++;
+    }else if ( count > maiorOcorrencia ) {
+      maior = arrayEntrada[i-1];
+      maiorOcorrencia = count;
+    }
+  }
+  return maior;
+}
+var arrayEntrada = [1, 2, 3, 4, 5, 2, 2, 3];
+console.log(countMaior(arrayEntrada));
