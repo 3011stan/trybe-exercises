@@ -81,3 +81,19 @@ function sumNumbers(number){
   return retornoNumber;
 }
 console.log(sumNumbers(5));
+
+//Exercicio 7:
+function verificaString(word, ending) {
+  let inverseWord = word.split("").reverse().join("");
+  let inverseEnding = ending.split("").reverse().join("");
+  let tamEnding = inverseEnding.length;
+  for(let i = 0; i < inverseEnding.length; i += 1){
+    if(inverseWord[i] != inverseEnding[i]){
+      return false;
+    }else{
+      return true;
+    }
+  }
+}
+
+console.log(verificaString('trybe', 'be'));
