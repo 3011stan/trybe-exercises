@@ -96,4 +96,4 @@ function verificaString(word, ending) {
   }
 }
 
-console.log(verificaString('trybe', 'be'));
+console.log(verificaString("oloco", "oco"));
