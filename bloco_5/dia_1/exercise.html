@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    <script>
+        
+//         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
+//         - document.getElementById()
+//         - document.getElementsByClassName()
+//         - document.getElementsByTagName()
+//  Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
+      let elementP = document.getElementsByTagName('p'); //selecionando todos elementos de tag p
+      function altText(elementP) {
+        elementP[0].innerHTML = 'Espero estar numa boa empresa de tecnologia evoluindo.';
+      }
+      altText(elementP);
+//  Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
+      let backgroundCenterMain = document.getElementsByClassName('main-content');
+      function altBackgroundMain(backgroundCenterMain) {
+        backgroundCenterMain[0].style.backgroundColor = 'rgb(78,164,109)';
+      }
+      altBackgroundMain(backgroundCenterMain);
+//  Crie uma função que mude a cor do quadrado vermelho para branco.
+      let altBackgroundCenter = document.getElementsByClassName('center-content');
+      function altBackgroundCenterFunction(allClassCenterContent){
+        allClassCenterContent[0].style.backgroundColor = 'white';
+      }
+      altBackgroundCenterFunction(altBackgroundCenter);
+//  Crie uma função que corrija o texto da tag <h1>.
+      let captureH1 = document.getElementsByClassName('title');
+      function correctTextH1(allClassTitle){
+      allClassTitle[0].innerHTML = 'Exercício 5.1 - JavaScript'
+    }
+      correctTextH1(captureH1);
+//  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+      let = allElementsP = document.getElementsByTagName('p'); //pegando tds elementos com p
+      function altUpperCase(allElementsP){
+        for(let i = 0; i < allElementsP.length; i += 1){
+          let textAlt = allElementsP[i].innerText; //allElements[i] é um objeto, para funfar  devo transforma lo em uma string.
+          allElementsP[i].innerText = textAlt.toUpperCase();
+        }
+      }
+      altUpperCase(allElementsP);
+//  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+      let showTagsP = document.getElementsByTagName('p');
+      function listTagsP(objectTagsP){
+        for(let i = 0; i < objectTagsP.length; i += 1){
+          let showStringP = objectTagsP[i].innerText;
+          console.log(showStringP);
+        }
+      }
+      listTagsP(showTagsP);
+    </script>
+  </body>
+</html>
