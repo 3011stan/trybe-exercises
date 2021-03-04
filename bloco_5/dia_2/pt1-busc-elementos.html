@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
 <div id="paiDoPai">
   <div id="pai">
     <div id="primeiroFilho"></div>
@@ -10,3 +20,25 @@
     <div id="quartoEUltimoFilho"></div>
   </div>
 </div>
+<script>
+  //acesse o elemento elementoOndeVoceEsta
+  let acessElementOndeVoceEsta = document.querySelector('#elementoOndeVoceEsta');
+  //acesse pai a partir de elementoOndeVoce esta e adicione uma cor a ele
+  let altColor = acessElementOndeVoceEsta.parentNode;
+  altColor.style.backgroundColor = 'yellow';
+  //acesse o primeiroFilhoDoFilho e adicione um texto a ele. 
+  let addTextFiDoFi = document.querySelector('#primeiroFilhoDoFilho');
+  addTextFiDoFi.innerText = 'Olá, eu sou o primeiro filho do filho.';
+  //acesse o primeiroFilho a partir de pai.
+  let primeiroFilho = document.querySelector('#pai').childNodes[1];
+  //agr acesse o primeiroFilho da partir de elementoOndeVoceEsta
+  let firstChildxD = document.querySelector('#elementoOndeVoceEsta').previousElementSibling;
+  //agr acesse o texto Atenção! a partir de elementoOndeVoceEsta
+  let atentionText = document.querySelector('#elementoOndeVoceEsta').nextSibling;
+  //agr acese o terceiroFilho a partir de elementoOndeVoceEsta
+  let tercFilho = document.querySelector('#elementoOndeVoceEsta').nextElementSibling;
+  //agr acesse o terceiro filho a partir do pai
+  let terFilhoAPartirDoPai = document.querySelector('#pai').childNodes[5];
+</script>
+</body>
+</html>
