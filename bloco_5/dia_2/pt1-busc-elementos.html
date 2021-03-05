@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<div id="paiDoPai">
+  <div id="pai">
+    <div id="primeiroFilho"></div>
+    <div id="elementoOndeVoceEsta">
+      <div id="primeiroFilhoDoFilho"></div>
+      <div id="segundoEUltimoFilhoDoFilho"></div>
+    </div>
+    Atenção!
+    <div id="terceiroFilho"></div>
+    <div id="quartoEUltimoFilho"></div>
+  </div>
+</div>
+<script>
+  //acesse o elemento elementoOndeVoceEsta
+  let acessElementOndeVoceEsta = document.querySelector('#elementoOndeVoceEsta');
+  //acesse pai a partir de elementoOndeVoce esta e adicione uma cor a ele
+  let altColor = acessElementOndeVoceEsta.parentNode;
+  altColor.style.backgroundColor = 'yellow';
+  //acesse o primeiroFilhoDoFilho e adicione um texto a ele. 
+  let addTextFiDoFi = document.querySelector('#primeiroFilhoDoFilho');
+  addTextFiDoFi.innerText = 'Olá, eu sou o primeiro filho do filho.';
+  //acesse o primeiroFilho a partir de pai.
+  let primeiroFilho = document.querySelector('#pai').childNodes[1];
+  //agr acesse o primeiroFilho da partir de elementoOndeVoceEsta
+  let firstChildxD = document.querySelector('#elementoOndeVoceEsta').previousElementSibling;
+  //agr acesse o texto Atenção! a partir de elementoOndeVoceEsta
+  let atentionText = document.querySelector('#elementoOndeVoceEsta').nextSibling;
+  //agr acese o terceiroFilho a partir de elementoOndeVoceEsta
+  let tercFilho = document.querySelector('#elementoOndeVoceEsta').nextElementSibling;
+  //agr acesse o terceiro filho a partir do pai
+  let terFilhoAPartirDoPai = document.querySelector('#pai').childNodes[5];
+  //crie um irmão para elementoOndeVoceEsta
+  let insertBrother = document.createElement('div');
+  insertBrother.id = 'div-irmao-do-ondeVcEsta';
+  let paiDoElementoOndeVoceEsta = document.querySelector('#pai');
+  paiDoElementoOndeVoceEsta.appendChild(insertBrother);
+  //crie um filho para elementoOndeVoceEsta
+  let insertChild = document.createElement('div');
+  insertChild.id = 'filhoDoElementoOndeVoceEsta';
+  acessElementOndeVoceEsta.appendChild(insertChild);
+  //cire um filho para o primeiroFilhoDoFilho
+  let primeiroFilhoDoFilho = document.querySelector('#primeiroFilhoDoFilho');
+  let filhoDoPrimeiroFilhoDoFilho = document.createElement('div');
+  filhoDoPrimeiroFilhoDoFilho.id = 'filhoDoPrimeiroFiDoFi';
+  primeiroFilhoDoFilho.appendChild(filhoDoPrimeiroFilhoDoFilho);
+  //a partir desse filho criado, acesse terceiro filho.
+  let papi = filhoDoPrimeiroFilhoDoFilho.parentNode.parentNode.parentNode;
+  let acessTerceiroFilho = papi.children[2];
+  acessTerceiroFilho.innerText = 'sou o terceiro filho';
+  //remova tds elementos da page, exceto pai, elementoOndeVoceEsta e primeiroFilhoDoFilho
+  // let paiDoPai = document.getElementById('paiDoPai');
+  // document.body.removeChild(paiDoPai);
+  let father = document.getElementById('pai');
+  father.removeChild(father.childNodes[1]); // 0 - text, 1 - primeiroFilho
+  //delete segundoEUltimoFilhoDoFilho
+  let ondeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+  ondeVoceEsta.removeChild(ondeVoceEsta.childNodes[3]);
+  //removendo filhoDoElementoOndeVoceEsta
+  ondeVoceEsta.removeChild(ondeVoceEsta.childNodes[4]);
+  //removendo filhoDoPrimeiroFiDoFi
+  let firstFiDoFi = document.getElementById('primeiroFilhoDoFilho');
+  firstFiDoFi.removeChild(firstFiDoFi.firstElementChild);
+  //removendo 3 ultimas divs filhas do pai
+  for(let i = 0; i < 3; i += 1){
+    father.removeChild(father.lastElementChild);
+  }
+</script>
+</body>
+</html>
