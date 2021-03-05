@@ -65,9 +65,15 @@
   //delete segundoEUltimoFilhoDoFilho
   let ondeVoceEsta = document.getElementById('elementoOndeVoceEsta');
   ondeVoceEsta.removeChild(ondeVoceEsta.childNodes[3]);
-  //delete filhoDoPrimeiroFiDoFi
-  let fiDoFi = document.getElementById('primeiroFilhoDoFilho');
-  fiDoFi.removeChild(fiDoFi.firstElementChild);
+  //removendo filhoDoElementoOndeVoceEsta
+  ondeVoceEsta.removeChild(ondeVoceEsta.childNodes[4]);
+  //removendo filhoDoPrimeiroFiDoFi
+  let firstFiDoFi = document.getElementById('primeiroFilhoDoFilho');
+  firstFiDoFi.removeChild(firstFiDoFi.firstElementChild);
+  //removendo 3 ultimas divs filhas do pai
+  for(let i = 0; i < 3; i += 1){
+    father.removeChild(father.lastElementChild);
+  }
 </script>
 </body>
 </html>
