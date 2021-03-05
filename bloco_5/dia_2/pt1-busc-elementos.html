@@ -60,14 +60,14 @@
   //remova tds elementos da page, exceto pai, elementoOndeVoceEsta e primeiroFilhoDoFilho
   // let paiDoPai = document.getElementById('paiDoPai');
   // document.body.removeChild(paiDoPai);
-  // let father = document.getElementById('pai');
-  // father.removeChild(father.childNodes[1]); // 0 - text, 1 - primeiroFilho
-  // //delete segundoEUltimoFilhoDoFilho
-  // let ondeVoceEsta = document.getElementById('elementoOndeVoceEsta');
-  // ondeVoceEsta.removeChild(ondeVoceEsta.childNodes[3]);
-  // //delete filhoDoPrimeiroFiDoFi
-  // let fiDoFi = document.getElementById('primeiroFilhoDoFilho');
-  // fiDoFi.removeChild(fiDoFi.firstElementChild);
+  let father = document.getElementById('pai');
+  father.removeChild(father.childNodes[1]); // 0 - text, 1 - primeiroFilho
+  //delete segundoEUltimoFilhoDoFilho
+  let ondeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+  ondeVoceEsta.removeChild(ondeVoceEsta.childNodes[3]);
+  //delete filhoDoPrimeiroFiDoFi
+  let fiDoFi = document.getElementById('primeiroFilhoDoFilho');
+  fiDoFi.removeChild(fiDoFi.firstElementChild);
 </script>
 </body>
 </html>
