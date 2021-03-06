@@ -165,3 +165,37 @@ function setDayColor() {
   })
 };
 setDayColor();
+
+//Exercício bonus
+function addCompromisse(){
+  // let getTextBox1 = document.querySelector('#task-input');
+  let getTextBox1 = document.querySelector('#task-input');
+  let getButton = document.querySelector('#btn-add');
+  let getTaskList = document.querySelector('.task-list');
+  let textInsert = '';
+  getButton.addEventListener('click', function(){
+    if(getTextBox1.value == ''){
+      alert('Erro ao clicar em ADICIONAR!');
+    }else{
+      textInsert = getTextBox1.value;
+      getTextBox1.value = '';
+      let elementLi = document.createElement('li');
+      elementLi.innerText = textInsert;
+      getTaskList.appendChild(elementLi);
+      console.log(getTaskList);
+    }
+  })
+
+  getTextBox1.addEventListener('keyup', function(event){
+    if(event.keyCode === 13 && getTextBox1.value == ''){
+      alert('Erro ao criar um compromisso, digite algo.');
+    }else if(event.keyCode === 13){
+      textInsert = getTextBox1.value;
+      getTextBox1.value = '';
+      let elementLi = document.createElement('li');
+      elementLi.innerText = textInsert;
+      getTaskList.appendChild(elementLi);
+    }
+  })
+};
+addCompromisse();
