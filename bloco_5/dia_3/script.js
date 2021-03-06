@@ -111,17 +111,17 @@ zoomText();
 noZoomText();
 
 //Exercício 7
-function createTask(task){
+function createTask(task) {
   let getMyTasks = document.querySelector('.my-tasks');
   let insertTask = document.createElement('span');
   insertTask.innerText = task;
   getMyTasks.appendChild(insertTask);
-}
-let task = 'Projeto';
-createTask(task);
+};
+let task = ['Projeto'];
+createTask(task[0]);
 
 //Exercício 8
-function addLegendWithColor(color){
+function addLegendWithColor(color) {
   let newDiv = document.createElement('div');
   let getMytasks = document.querySelector('.my-tasks');
   newDiv.className = 'task';
@@ -130,3 +130,38 @@ function addLegendWithColor(color){
 }
 let color = 'green';
 addLegendWithColor(color);
+
+//Exercicio 9
+function setTasks() {
+  let getTask = document.querySelector('.task');
+  getTask.addEventListener('click', function () {
+    if (getTask.className != 'task selected') {
+      getTask.className = 'task selected';
+    } else {
+      getTask.className = 'task';
+    }
+  })
+};
+setTasks();
+
+//Exercicio 10
+function setDayColor() {
+  let getDivUl = document.getElementById('days');
+  let circleTask = document.querySelector('.task');
+  let colorBack = null;
+  circleTask.addEventListener('click', function(event){
+    if(circleTask.className === 'task selected'){
+      colorBack = event.target.style.backgroundColor;
+    }else{
+      colorBack = 'rgb(119,119,119)';
+    }
+  })
+  getDivUl.addEventListener('click', function(event){
+    if(event.target.style.color === colorBack){
+      event.target.style.color = 'rgb(119,119,119)';
+    }else{
+      event.target.style.color = colorBack;
+    }
+  })
+};
+setDayColor();
