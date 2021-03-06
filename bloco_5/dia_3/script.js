@@ -109,3 +109,24 @@ function noZoomText() {
 };
 zoomText();
 noZoomText();
+
+//Exercício 7
+function createTask(task){
+  let getMyTasks = document.querySelector('.my-tasks');
+  let insertTask = document.createElement('span');
+  insertTask.innerText = task;
+  getMyTasks.appendChild(insertTask);
+}
+let task = 'Projeto';
+createTask(task);
+
+//Exercício 8
+function addLegendWithColor(color){
+  let newDiv = document.createElement('div');
+  let getMytasks = document.querySelector('.my-tasks');
+  newDiv.className = 'task';
+  newDiv.style.background = color;
+  getMytasks.appendChild(newDiv);
+}
+let color = 'green';
+addLegendWithColor(color);
