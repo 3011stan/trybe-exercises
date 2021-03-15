@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./form.css">
+</head>
+
+<body>
+  <main>
+    <form>
+      <fieldset>
+        <legend>Currículo</legend>
+        <label for="nome"></label>Nome:
+        <input type="text" name="nome" id="nome" maxlength="40" required>
+        <br>
+        <label for="mail"></label>E-mail:
+        <input type="email" name="mail" id="mail" maxlength="50" required>
+        <br>
+        <label for="cpf"></label>CPF:
+        <input type="text" name="cpf" id="cpf" maxlength="11" required>
+        <br>
+        <label for="address"></label>Endereço:
+        <input type="text" name="address" id="address" maxlength="200" required>
+        <br>
+        <label for="city"></label>Cidade:
+        <input type="text" name="city" id="city" maxlength="28" required>
+        <br>
+        <label for="Estado"></label>Estado:
+        <select id="states" name="states" required>
+        </select>
+        <br>
+        <div id="casa">
+          <input type="radio" id="housing1" name="housing" value="casa" required>
+          <label for="housing1"></label>Casa
+        </div>
+        <div id="apartamento">
+          <input type="radio" id="housing2" name="housing" value="apartamento" required>
+          <label for="housing2"></label>Apartamento
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Último emprego</legend>
+        <label for="resume"></label>Resumo do currículo:
+        <br>
+        <textarea name="resume" id="resume" cols="60" rows="5" maxlength="1000" required></textarea>
+        <br>
+        <label for="post"></label>Cargo:
+        <input type="text" name="post" id="post" maxlength="500" required>
+        <br>
+        <label for="startDate"></label>Data de início:
+        <input type="text" name="startDate" id="startDate">
+      </fieldset>
+      <button id="button-submit">Enviar</button>
+    </form>
+  </main>
+
+  <script src="./form.js"></script>
+
+</body>
+
+</html>
