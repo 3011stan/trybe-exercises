@@ -1,0 +1,33 @@
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#formulario {
+  background-color: green;
+  padding: 20px;
+  height: 300px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form {
+  padding-top: 45%;
+}
+
+
+#idEmail {
+  margin-bottom: 10px;
+}
+
+#buttonEnter {
+  margin-top: 10px;
+}
+
+button {
+  background-color: black;
+  color: white;
+  style
+}
