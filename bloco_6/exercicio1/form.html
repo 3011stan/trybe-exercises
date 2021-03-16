@@ -7,8 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="form.css">
   <script src="./jquery-3.6.0.min.js"></script>
   <script src="./bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <link rel="stylesheet "type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
 </head>
 
 <body>
@@ -55,7 +58,8 @@
         <div class="form-label">
           <label for="resume">Resumo do currículo:</label>
           <br>
-          <textarea class="form-control" name="resume" id="resume" cols="60" rows="5" maxlength="1000" required></textarea>
+          <textarea class="form-control" name="resume" id="resume" cols="60" rows="5" maxlength="1000"
+            required></textarea>
         </div>
         <div class="form-label">
           <label for="post">Cargo:</label>
@@ -63,13 +67,12 @@
         </div>
         <div class="form-label">
           <label for="startDate">Data de início:</label>
-          <input class="form-control" type="date" name="startDate" id="startDate">
+          <input class="form-control" type="text" name="startDate" id="startDate">
         </div>
       </fieldset>
-      <button type="submit" class="btn btn-sucess" id="button-submit">Enviar</button>
+      <button type="submit" class="btn btn-primary" id="button-submit">Enviar</button>
     </form>
   </main>
-
   <script src="./form.js"></script>
 </body>
 
