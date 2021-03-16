@@ -1,12 +1,4 @@
-#casa, #apartamento {
-  display: inline-block;
-  width: auto;
-}
-
-input, select {
-  margin: 3px;
-}
-
-#button-submit {
-  padding: 5px;
+body {
+  max-width: 80%;
+  margin: auto;
 }
