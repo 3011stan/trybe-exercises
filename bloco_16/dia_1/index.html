@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/redux@4.1.0/dist/redux.min.js"></script>
+  <title>Redux Basic Example</title>
+</head>
+
+<body>
+  <div>
+    Clicked: <span id="value">0</span>
+    <button id="increment">+</button>
+    <button id="decrement">-</button>
+    <button id="increment-10">Adiciona 10</button>
+  </div>
+  <script>
+    // formato da action
+    // {
+    //   type: 'ADD_TASK',
+    //     payload: {
+    //     text: 'Estudar JS',
+    //     }
+    // }
+    // criando reducer (formato padrão)
+    function counterReducer(state = 0, action) { // nomes padrões mas nao reservados.
+      switch (action.type) {
+        case 'INCREMENT':
+          // state = state + 1 (NUNCA FAZER ISTO)!
+          return state + 1;
+          break;
+        case 'DECREMENT':
+          return state - 1;
+          break;
+        case 'INCREMENT_10':
+          return state + 10;
+          break;
+        default:
+          return state;
+      };
+
+    };
+
+    // criando store passando o counterReducer ( q ainda n existe ).
+    const store = Redux.createStore(
+      counterReducer,
+      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+      );
+    // esta parte conect a interface (view/button) com a action, q dps chegará no reducer.
+    document
+      .querySelector('#increment')
+      .addEventListener('click', () => {
+        const incrementAction = {
+          type: 'INCREMENT',
+        };
+        store.dispatch(incrementAction); // disparando ACTION
+      });
+    
+    // pede os dados e atualiza a página.
+    store.subscribe(() => {
+      document.querySelector('#value').innerHTML = store.getState(); // haverá uma library q fará isso automaticamente
+    }); // td vez q houver alt no estado global, chamo a func no callback.
+  </script>
+</body>
+
+</html>
